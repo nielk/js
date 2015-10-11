@@ -1,0 +1,766 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Les Types | Invention du langage javascript</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.4.3">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-exercises/exercises.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-quiz/style.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../basics/egalite.html" />
+    
+    
+    <link rel="prev" href="../basics/variables.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="1.3" data-basepath=".." data-revision="Sun Oct 11 2015 23:27:00 GMT+0200 (CEST)">
+    
+
+<div class="book-summary">
+    <div class="book-search" role="search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="basics/index.html">
+            
+                
+                    <a href="../basics/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Les bases
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="basics/commentaires.html">
+            
+                
+                    <a href="../basics/commentaires.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Les Commentaires
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basics/variables.html">
+            
+                
+                    <a href="../basics/variables.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Les Variables
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="basics/types.html">
+            
+                
+                    <a href="../basics/types.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Les Types
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="basics/egalite.html">
+            
+                
+                    <a href="../basics/egalite.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        L&#39;Egalité
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="numbers/index.html">
+            
+                
+                    <a href="../numbers/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Les nombres
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="numbers/create.html">
+            
+                
+                    <a href="../numbers/create.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Création
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="numbers/operators.html">
+            
+                
+                    <a href="../numbers/operators.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Opérateurs de base
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="numbers/advanced.html">
+            
+                
+                    <a href="../numbers/advanced.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Opérateurs avancé
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="strings/index.html">
+            
+                
+                    <a href="../strings/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Strings
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="strings/create.html">
+            
+                
+                    <a href="../strings/create.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Création
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="strings/concat.html">
+            
+                
+                    <a href="../strings/concat.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Concatenation
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="strings/length.html">
+            
+                
+                    <a href="../strings/length.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Length
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="conditional/index.html">
+            
+                
+                    <a href="../conditional/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Logique conditionnelle
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="conditional/if.html">
+            
+                
+                    <a href="../conditional/if.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        If
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="conditional/else.html">
+            
+                
+                    <a href="../conditional/else.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Else
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="conditional/comparators.html">
+            
+                
+                    <a href="../conditional/comparators.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        Comparateurs
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="conditional/concatenate.html">
+            
+                
+                    <a href="../conditional/concatenate.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        Concaténation
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="arrays/index.html">
+            
+                
+                    <a href="../arrays/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Arrays
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="arrays/indices.html">
+            
+                
+                    <a href="../arrays/indices.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Indices
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="arrays/length.html">
+            
+                
+                    <a href="../arrays/length.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        Length
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="loops/index.html">
+            
+                
+                    <a href="../loops/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Les Boucles
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="loops/for.html">
+            
+                
+                    <a href="../loops/for.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        Boucle For
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="loops/while.html">
+            
+                
+                    <a href="../loops/while.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        Boucle While
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="loops/dowhile.html">
+            
+                
+                    <a href="../loops/dowhile.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        Boucle Do...While
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Invention du langage javascript</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="les-types-de-variables">Les types de variables</h1>
+<p>En programmation nous pouvons utiliser des variables plus complexe que de simple nombre. En Javascript il existe diff&#xE9;rents types de variables.</p>
+<p>Les types les plus courants sont:</p>
+<ul>
+<li><strong>Numbers</strong><ul>
+<li><strong>Float</strong>: un nombre, tel que 1.21323, 4, -33.5, 100004 ou 0.123</li>
+<li><strong>Integer</strong>: un nombre tel que 1, 12, -33, 140 mais pas 1.233</li>
+</ul>
+</li>
+</ul>
+<p>exemple: <code>var height = 1.78;</code>, <code>var age = 12;</code></p>
+<ul>
+<li><strong>String</strong>: une ligne de texte tel que &quot;pony&quot;, &quot;unicorn&quot; or &quot;My little pony&quot;</li>
+</ul>
+<p>exemple: <code>var text = &amp;quot;Hello world&amp;quot;;</code></p>
+<ul>
+<li><strong>Boolean</strong>: soit true (vrai) or false (faux), et rien d&apos;autre.</li>
+</ul>
+<p>exemple: <code>var foo = true;</code> ou <code>`var foo = false;</code></p>
+<ul>
+<li><strong>Arrays</strong>: une collection de valeurs comme: 1,2,3,4,&apos;hello world&apos;</li>
+</ul>
+<p>exemple: <code>var tableau = [1, 3, 2, 12, &amp;quot;hello&amp;quot;];</code></p>
+<ul>
+<li><strong>Objects</strong>: une repr&#xE9;sentation d&apos;un objet plus complexe</li>
+</ul>
+<p>exemple:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> obj = {
+    name: <span class="hljs-string">&quot;bob&quot;</span>,
+    age: <span class="hljs-number">32</span>,
+    height: <span class="hljs-number">1.78</span>,
+    text: <span class="hljs-string">&quot;Hello I&apos;m bob&#x2026;&quot;</span>
+}
+</code></pre>
+<ul>
+<li><strong>null</strong>: une variable qui contient &quot;null&quot; ne contient pas de donn&#xE9;es valide (ne contient de de Number, String, Boolean, Array ou Object valide) ou est volontaire assigner &#xE0; vide.</li>
+</ul>
+<p>exemple: <code>var a = null;</code></p>
+<ul>
+<li><strong>undefined</strong>: la valeur &quot;undefined&quot; est obtenue lorsqu&apos;on appelle une propri&#xE9;t&#xE9; qui n&apos;existe pas dans un object, ou lorsqu&apos;une variable &#xE0; &#xE9;t&#xE9; d&#xE9;clar&#xE9; mais n&apos;a pas de valeur assign&#xE9;e.</li>
+</ul>
+<p>exemple:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> a;
+alert(a); <span class="hljs-comment">// &quot;alert&quot; permet d&apos;afficher un message dans une petite fen&#xEA;tre d&apos;information</span>
+</code></pre>
+<p>On dit que le Javascript n&apos;a pas de typage fort, cela signifie que vous n&apos;avez pas a d&#xE9;clarer explicitement le type d&apos;une variable. Vous avez juste besoin d&apos;utiliser le mot cl&#xE9; <code>var</code> pour indiquer que vous d&#xE9;clarez une variable et l&apos;interpr&#xE9;teur trouvera de quel type est votre variable.</p>
+<p><div class="exercise">
+	<div class="header">Exercise</div>
+	<div class="alert alert-success">
+	    <b>Correct!</b>
+	</div>
+
+	<div class="alert alert-danger error-message">
+	    <b>False!</b>
+	</div>
+
+	<div class="message">
+	
+D&#xE9;clarer une variable &quot;a&quot; de type String et assigner lui la valeur &quot;23&quot;.
+
+	</div>
+	<div class="editor" style="height: 20px"></div>
+
+	<pre class="hidden code-solution">var a = &quot;23&quot;;</pre>
+	<pre class="hidden code-validation">assert(a === &quot;23&quot;);</pre>
+	
+
+	<div class="buttons">
+	    <a href="#" class="button size-2 action-submit">Submit</a>
+	    <a href="#" class="button size-2 action-solution">Solution</a>
+	</div>
+</div></p>
+<p><div class="exercise">
+	<div class="header">Exercise</div>
+	<div class="alert alert-success">
+	    <b>Correct!</b>
+	</div>
+
+	<div class="alert alert-danger error-message">
+	    <b>False!</b>
+	</div>
+
+	<div class="message">
+	
+D&#xE9;clarer une variable &quot;foo&quot; qui retourne la valeur &quot;undefined&quot;.
+
+	</div>
+	<div class="editor" style="height: 20px"></div>
+
+	<pre class="hidden code-solution">var foo;</pre>
+	<pre class="hidden code-validation">assert(typeof foo === &quot;undefined&quot;);</pre>
+	
+
+	<div class="buttons">
+	    <a href="#" class="button size-2 action-submit">Submit</a>
+	    <a href="#" class="button size-2 action-solution">Solution</a>
+	</div>
+</div></p>
+<quiz name="Quiz">
+    <question>
+        <p>Quel type de variable n&apos;existe pas en Javascript ?</p>
+        <answer>Number</answer>
+        <answer>Object</answer>
+        <answer correct="">List</answer>
+    </question>
+    <question>
+        <p>Que renvoie var a; ?</p>
+        <answer correct="">undefined</answer>
+        <answer>null</answer>
+        <answer>rien</answer>
+    </question>
+</quiz>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../basics/variables.html" class="navigation navigation-prev " aria-label="Previous page: Les Variables"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../basics/egalite.html" class="navigation navigation-next " aria-label="Next page: L&#39;Egalité"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-exercises/ace/ace.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-exercises/ace/theme-tomorrow.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-exercises/ace/mode-javascript.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-exercises/exercises.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-quiz/script.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2},"quiz":{"labels":{"showCorrect":"Afficher la réponse","check":"Corriger","showExplanation":"Explication","explanationHeader":"Explication"},"text":{"noChosen":"Aucune réponse n'a été choisie","incomplete":"Réponse imcomplète"},"buttons":{"showCorrect":true,"showExplanation":true}}};
+    gitbook.start(config);
+});
+</script>
+
+        <script src="../gitbook/plugins/gitbook-plugin-exercises/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+    </body>
+    
+</html>
