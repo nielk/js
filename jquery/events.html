@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Boucle For | Invention du langage javascript</title>
+        <title>Les Events | Invention du langage javascript</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.4.3">
@@ -37,10 +37,8 @@
         
     
     
-    <link rel="next" href="../loops/while.html" />
     
-    
-    <link rel="prev" href="../loops/index.html" />
+    <link rel="prev" href="../jquery/selection.html" />
     
 
         
@@ -48,7 +46,7 @@
     <body>
         
         
-    <div class="book" data-level="6.1" data-basepath=".." data-revision="Sun Oct 18 2015 22:19:50 GMT+0200 (CEST)">
+    <div class="book" data-level="11.2" data-basepath=".." data-revision="Sun Oct 18 2015 22:19:50 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -440,7 +438,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="6.1" data-path="loops/for.html">
+        <li class="chapter " data-level="6.1" data-path="loops/for.html">
             
                 
                     <a href="../loops/for.html">
@@ -695,7 +693,7 @@
             
         </li>
     
-        <li class="chapter " data-level="11.2" data-path="jquery/events.html">
+        <li class="chapter active" data-level="11.2" data-path="jquery/events.html">
             
                 
                     <a href="../jquery/events.html">
@@ -821,55 +819,16 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="la-boucle-for">La boucle For</h1>
-<p>La boucle la plus simple est le <code>For</code>. Elle a une syntaxe assez similaire au <code>if</code>, mais avec plus d&apos;options:</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">for</span>(condition; end condition; change){
-    <span class="hljs-comment">// do it, do it now</span>
-}
+                        <h1 id="les-events-avec-jquery">Les Events avec Jquery</h1>
+<p>Avec jquery nous pouvons aussi &#xE9;couter les Events du DOM.</p>
+<p>On utilise la syntaxe $(&quot;.maClass&quot;).on(&quot;click&quot;, function);</p>
+<p>exemple:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> handleClick = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    $(<span class="hljs-keyword">this</span>).hide(); <span class="hljs-comment">// l&apos;&#xE9;l&#xE9;ment se cache quand on click dessus</span>
+};
+
+$(<span class="hljs-string">&quot;.maClass&quot;</span>).on(<span class="hljs-string">&quot;click&quot;</span>, handleClick);
 </code></pre>
-<p>Voyons comment par exemple ex&#xE9;cuter le m&#xEA;me codes 10 fois en utilisant une boucle <code>For</code>:</p>
-<pre><code class="lang-undefined">for(var i = 0; i &lt; 10; i = i + 1){
-    // do this code ten-times
-}
-</code></pre>
-<blockquote>
-<p><strong><em>Note</em></strong>: <code>i = i + 1</code> peut &#xEA;tre &#xE9;crit <code>i++</code>.</p>
-</blockquote>
-<p><div class="exercise">
-	<div class="header">Exercise</div>
-	<div class="alert alert-success">
-	    <b>Correct!</b>
-	</div>
-
-	<div class="alert alert-danger error-message">
-	    <b>False!</b>
-	</div>
-
-	<div class="message">
-	
-Utiliser une boucle for, cr&#xE9;er une variable nomm&#xE9; `message` qui est &#xE9;gale &#xE0; la concat&#xE9;nation des nombres de 0 &#xE0; 99. (ex: &quot;012345&#x2026;99&quot;)
-
-	</div>
-	<div class="editor" style="height: 100px">var message = &quot;&quot;;</div>
-
-	<pre class="hidden code-solution">var message = &quot;&quot;;
-
-for(var i = 0; i &lt; 100; i++){
-    message = message + i;
-}</pre>
-	<pre class="hidden code-validation">var message2 = &quot;&quot;
-
-for(var i = 0; i &lt; 100; i++){
-    message2 = message2 + i;
-}
-assert(message === message2);</pre>
-	
-
-	<div class="buttons">
-	    <a href="#" class="button size-2 action-submit">Submit</a>
-	    <a href="#" class="button size-2 action-solution">Solution</a>
-	</div>
-</div></p>
 
                     
                     </section>
@@ -880,10 +839,8 @@ assert(message === message2);</pre>
         </div>
 
         
-        <a href="../loops/index.html" class="navigation navigation-prev " aria-label="Previous page: Les Boucles"><i class="fa fa-angle-left"></i></a>
+        <a href="../jquery/selection.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: La sélection"><i class="fa fa-angle-left"></i></a>
         
-        
-        <a href="../loops/while.html" class="navigation navigation-next " aria-label="Next page: Boucle While"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
