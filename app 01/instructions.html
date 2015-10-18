@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Concatenation | Invention du langage javascript</title>
+        <title>Instruction | Invention du langage javascript</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.4.3">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../strings/length.html" />
+    <link rel="next" href="../app 01/solution.html" />
     
     
-    <link rel="prev" href="../strings/create.html" />
+    <link rel="prev" href="../app 01/index.html" />
     
 
         
@@ -48,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="3.2" data-basepath=".." data-revision="Sun Oct 18 2015 22:08:57 GMT+0200 (CEST)">
+    <div class="book" data-level="10.1" data-basepath=".." data-revision="Sun Oct 18 2015 22:08:57 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -257,7 +257,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.2" data-path="strings/concat.html">
+        <li class="chapter " data-level="3.2" data-path="strings/concat.html">
             
                 
                     <a href="../strings/concat.html">
@@ -629,7 +629,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="10.1" data-path="app 01/instructions.html">
+        <li class="chapter active" data-level="10.1" data-path="app 01/instructions.html">
             
                 
                     <a href="../app 01/instructions.html">
@@ -813,42 +813,26 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="concat%C3%A9nation">Concat&#xE9;nation</h1>
-<p>La concat&#xE9;nation est le fait d&apos;additionner deux (ou plus) string ensemble. Cela combine les strings ensemble.</p>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> longTexte = <span class="hljs-string">&quot;Hello &quot;</span> + <span class="hljs-string">&quot;world ! My name is &quot;</span> + <span class="hljs-string">&quot;Bob &quot;</span>;
+                        <h1 id="todo-app-en-javascript-pure">Todo app en javascript pure</h1>
+<p>L&apos;objectif, ici est d&apos;utiliser nos connaissances des functions, des API du dom pour la s&#xE9;lection de nodeHTML et des Events disponibles pour construire notre Todo app.</p>
+<p>Ajoutez le code javascript n&#xE9;cessaire afin de pouvoir ajouter une t&#xE2;che dans la liste.</p>
+<p>sc&#xE9;nario:</p>
+<ol>
+<li>Je tape l&apos;intitul&#xE9; de ma t&#xE2;che dans la boite de texte (en bas).</li>
+<li>J&apos;appuie sur le bouton + (en bas)</li>
+<li>Ma nouvelle t&#xE2;che s&apos;affiche &#xE0; la suite de celle existante.</li>
+</ol>
+<p><strong>Hint/Indice</strong>:</p>
+<ul>
+<li>window.document.querySelector()</li>
+<li>.document.addEventListener(&quot;click&quot;, function)</li>
+<li>.innerHTML += &quot;&quot;</li>
+<li>pour obtenir le contenu d&apos;un <pre><code class="lang-js">  &lt;input type=<span class="hljs-string">&quot;text&quot;</span>&gt;
 </code></pre>
-<p><div class="exercise">
-	<div class="header">Exercise</div>
-	<div class="alert alert-success">
-	    <b>Correct!</b>
-	</div>
-
-	<div class="alert alert-danger error-message">
-	    <b>False!</b>
-	</div>
-
-	<div class="message">
-	
-Concat&#xE9;ner plusieurs variables et string afin que la variable `nomComplet` valent &quot;John Smith&quot;.
-
-	</div>
-	<div class="editor" style="height: 80px">var prenom = &quot;John&quot;;
-var nom = &quot;Smith&quot;;
-
-var nomComplet =</div>
-
-	<pre class="hidden code-solution">var prenom = &quot;John&quot;;
-var nom = &quot;Smith&quot;;
-
-var nomComplet = prenom + &quot; &quot; + nom;</pre>
-	<pre class="hidden code-validation">assert(nomComplet === &apos;John Smith&apos;);</pre>
-	
-
-	<div class="buttons">
-	    <a href="#" class="button size-2 action-submit">Submit</a>
-	    <a href="#" class="button size-2 action-solution">Solution</a>
-	</div>
-</div></p>
+  on utilise nodeHTML<strong>.value</strong></li>
+</ul>
+<p><em>Cliquer sur le logo JS Bin pour ouvrir le projet dans une nouvelle fen&#xEA;tre (plus pratique)</em>
+<a href="http://jsbin.com/suvicu/edit?html,js,output" target="_blank"></a></p>
 
                     
                     </section>
@@ -859,10 +843,10 @@ var nomComplet = prenom + &quot; &quot; + nom;</pre>
         </div>
 
         
-        <a href="../strings/create.html" class="navigation navigation-prev " aria-label="Previous page: Création"><i class="fa fa-angle-left"></i></a>
+        <a href="../app 01/index.html" class="navigation navigation-prev " aria-label="Previous page: Todo App"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../strings/length.html" class="navigation navigation-next " aria-label="Next page: Length"><i class="fa fa-angle-right"></i></a>
+        <a href="../app 01/solution.html" class="navigation navigation-next " aria-label="Next page: Solutions"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

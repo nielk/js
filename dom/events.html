@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Concatenation | Invention du langage javascript</title>
+        <title>Les événements | Invention du langage javascript</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.4.3">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../strings/length.html" />
+    <link rel="next" href="../app 01/index.html" />
     
     
-    <link rel="prev" href="../strings/create.html" />
+    <link rel="prev" href="../dom/window-&amp;-document.html" />
     
 
         
@@ -48,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="3.2" data-basepath=".." data-revision="Sun Oct 18 2015 22:08:57 GMT+0200 (CEST)">
+    <div class="book" data-level="9.2" data-basepath=".." data-revision="Sun Oct 18 2015 22:08:57 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -257,7 +257,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.2" data-path="strings/concat.html">
+        <li class="chapter " data-level="3.2" data-path="strings/concat.html">
             
                 
                     <a href="../strings/concat.html">
@@ -593,7 +593,7 @@
             
         </li>
     
-        <li class="chapter " data-level="9.2" data-path="dom/events.html">
+        <li class="chapter active" data-level="9.2" data-path="dom/events.html">
             
                 
                     <a href="../dom/events.html">
@@ -813,42 +813,41 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="concat%C3%A9nation">Concat&#xE9;nation</h1>
-<p>La concat&#xE9;nation est le fait d&apos;additionner deux (ou plus) string ensemble. Cela combine les strings ensemble.</p>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> longTexte = <span class="hljs-string">&quot;Hello &quot;</span> + <span class="hljs-string">&quot;world ! My name is &quot;</span> + <span class="hljs-string">&quot;Bob &quot;</span>;
+                        <h1 id="les-%C3%A9v%C3%A9nements-du-dom">Les &#xE9;v&#xE9;nements du DOM</h1>
+<p>Le DOM fournit une s&#xE9;rie d&apos;&#xE9;v&#xE9;nements. Ces &#xE9;v&#xE8;nements nous permette d&apos;ex&#xE9;cuter du code &#xE0; des moments pr&#xE9;cis. Par exemple lorsque la page a finit de se charger, lorsqu&apos;un utilisateur clique sur un &#xE9;l&#xE8;ment, lorsque la page d&#xE9;file, etc&#x2026;</p>
+<p>Voici une liste exemple des Events (&#xE9;v&#xE9;nements) fournit par le DOM:</p>
+<ul>
+<li>&quot;click&quot;</li>
+<li>&quot;mouseenter&quot;</li>
+<li>&quot;mouseleave&quot;</li>
+<li>&quot;mouseover&quot;</li>
+<li>&quot;keydown&quot;</li>
+<li>&quot;keypress&quot;</li>
+<li>&quot;keyup&quot;</li>
+<li>&quot;touchstart&quot;</li>
+<li>&quot;touchmove&quot;</li>
+<li>&quot;touchend&quot;</li>
+<li>&quot;resize&quot;</li>
+<li>&quot;scroll&quot;</li>
+<li>&quot;submit&quot;</li>
+<li>...</li>
+<li>La liste compl&#xE8;te : <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">https://developer.mozilla.org/en-US/docs/Web/Events</a></li>
+</ul>
+<p>Pour utiliser les Events, nous utilisons la <em>m&#xE9;thode</em> <code>.addEventListener(eventName, function);</code></p>
+<p>voici un exemple simple :</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Je s&#xE9;lectionne le node HTML sur lequel je souhaite appliquer un event</span>
+<span class="hljs-keyword">var</span> nodeH1 = <span class="hljs-built_in">window</span>.document.getElementsByTagName(<span class="hljs-string">&apos;h1&apos;</span>);
+
+<span class="hljs-comment">// Je cr&#xE9;e une funtion qui sera ex&#xE9;cut&#xE9; lorsque l&apos;&#xE9;vent se d&#xE9;clenchera</span>
+<span class="hljs-keyword">var</span> handleClick = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    alert(<span class="hljs-string">&quot;l&apos;&#xE9;l&#xE9;ment H1 &#xE0; &#xE9;t&#xE9; cliqu&#xE9;!&quot;</span>);
+};
+
+<span class="hljs-comment">// J&apos;&#xE9;coute l&apos;event click sur le node de l&apos;&#xE9;l&#xE9;ment H1</span>
+nodeH1.addEventListener(<span class="hljs-string">&quot;click&quot;</span>, handleClick);
 </code></pre>
-<p><div class="exercise">
-	<div class="header">Exercise</div>
-	<div class="alert alert-success">
-	    <b>Correct!</b>
-	</div>
-
-	<div class="alert alert-danger error-message">
-	    <b>False!</b>
-	</div>
-
-	<div class="message">
-	
-Concat&#xE9;ner plusieurs variables et string afin que la variable `nomComplet` valent &quot;John Smith&quot;.
-
-	</div>
-	<div class="editor" style="height: 80px">var prenom = &quot;John&quot;;
-var nom = &quot;Smith&quot;;
-
-var nomComplet =</div>
-
-	<pre class="hidden code-solution">var prenom = &quot;John&quot;;
-var nom = &quot;Smith&quot;;
-
-var nomComplet = prenom + &quot; &quot; + nom;</pre>
-	<pre class="hidden code-validation">assert(nomComplet === &apos;John Smith&apos;);</pre>
-	
-
-	<div class="buttons">
-	    <a href="#" class="button size-2 action-submit">Submit</a>
-	    <a href="#" class="button size-2 action-solution">Solution</a>
-	</div>
-</div></p>
+<p>Un exemple de l&apos;utilisation des &#xE9;v&#xE9;nements les plus courants :</p>
+<p><a href="http://jsbin.com/waxofo/edit?html,js,output" target="_blank">code source</a></p>
 
                     
                     </section>
@@ -859,10 +858,10 @@ var nomComplet = prenom + &quot; &quot; + nom;</pre>
         </div>
 
         
-        <a href="../strings/create.html" class="navigation navigation-prev " aria-label="Previous page: Création"><i class="fa fa-angle-left"></i></a>
+        <a href="../dom/window-&amp;-document.html" class="navigation navigation-prev " aria-label="Previous page: window.document"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../strings/length.html" class="navigation navigation-next " aria-label="Next page: Length"><i class="fa fa-angle-right"></i></a>
+        <a href="../app 01/index.html" class="navigation navigation-next " aria-label="Next page: Todo App"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

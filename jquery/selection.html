@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Concatenation | Invention du langage javascript</title>
+        <title>La sélection | Invention du langage javascript</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.4.3">
@@ -37,10 +37,8 @@
         
     
     
-    <link rel="next" href="../strings/length.html" />
     
-    
-    <link rel="prev" href="../strings/create.html" />
+    <link rel="prev" href="../jquery/index.html" />
     
 
         
@@ -48,7 +46,7 @@
     <body>
         
         
-    <div class="book" data-level="3.2" data-basepath=".." data-revision="Sun Oct 18 2015 22:08:57 GMT+0200 (CEST)">
+    <div class="book" data-level="11.1" data-basepath=".." data-revision="Sun Oct 18 2015 22:08:57 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -257,7 +255,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.2" data-path="strings/concat.html">
+        <li class="chapter " data-level="3.2" data-path="strings/concat.html">
             
                 
                     <a href="../strings/concat.html">
@@ -680,7 +678,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="11.1" data-path="jquery/selection.html">
+        <li class="chapter active" data-level="11.1" data-path="jquery/selection.html">
             
                 
                     <a href="../jquery/selection.html">
@@ -813,42 +811,38 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="concat%C3%A9nation">Concat&#xE9;nation</h1>
-<p>La concat&#xE9;nation est le fait d&apos;additionner deux (ou plus) string ensemble. Cela combine les strings ensemble.</p>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> longTexte = <span class="hljs-string">&quot;Hello &quot;</span> + <span class="hljs-string">&quot;world ! My name is &quot;</span> + <span class="hljs-string">&quot;Bob &quot;</span>;
+                        <h1 id="la-s%C3%A9l%C3%A9ction-avec-jquery">La s&#xE9;l&#xE9;ction avec Jquery</h1>
+<p>Pour s&#xE9;lectioner un &#xE9;l&#xE9;ment du DOM il suffit de faire:</p>
+<pre><code class="lang-js">$(<span class="hljs-string">&quot;.maClass&quot;</span>); <span class="hljs-comment">// une class</span>
+<span class="hljs-comment">// ou</span>
+$(<span class="hljs-string">&quot;h1&quot;</span>); <span class="hljs-comment">// un tag</span>
+<span class="hljs-comment">// ou</span>
+$(<span class="hljs-string">&quot;#first&quot;</span>); <span class="hljs-comment">// un id</span>
+<span class="hljs-comment">// ou</span>
+$(<span class="hljs-string">&quot;h1 &gt; p.text&quot;</span>) <span class="hljs-comment">// un selector CSS</span>
 </code></pre>
-<p><div class="exercise">
-	<div class="header">Exercise</div>
-	<div class="alert alert-success">
-	    <b>Correct!</b>
-	</div>
+<p>Ensuite jquery fournit plein de function/m&#xE9;thodes pour interagir sur ces &#xE9;l&#xE9;ments HTML:</p>
+<pre><code class="lang-js">$(<span class="hljs-string">&quot;.maClass&quot;</span>).hide(); <span class="hljs-comment">// cache le/les &#xE9;l&#xE9;ments du DOM qui ont la class .maClass</span>
+$(<span class="hljs-string">&quot;.maClass&quot;</span>).show(); <span class="hljs-comment">// inversement</span>
 
-	<div class="alert alert-danger error-message">
-	    <b>False!</b>
-	</div>
+$(<span class="hljs-string">&quot;.maClass&quot;</span>).fadeOut(); <span class="hljs-comment">// fait dispara&#xEE;tre avec une animation d&apos;effacement</span>
 
-	<div class="message">
-	
-Concat&#xE9;ner plusieurs variables et string afin que la variable `nomComplet` valent &quot;John Smith&quot;.
+$(<span class="hljs-string">&quot;h1&quot;</span>).addClass(<span class="hljs-string">&quot;maClass&quot;</span>); <span class="hljs-comment">// ajoute &quot;maClass&quot; comme classe de l&apos;&#xE9;l&#xE9;ment h1</span>
+$(<span class="hljs-string">&quot;h1&quot;</span>).removeClass(<span class="hljs-string">&quot;maClass&quot;</span>); <span class="hljs-comment">// enl&#xE8;ve &quot;maClass&quot; de l&apos;&#xE9;l&#xE9;ment h1</span>
 
-	</div>
-	<div class="editor" style="height: 80px">var prenom = &quot;John&quot;;
-var nom = &quot;Smith&quot;;
+$(<span class="hljs-string">&quot;.square&quot;</span>).width(); <span class="hljs-comment">// retourne la largeur en pixel de .square</span>
+$(<span class="hljs-string">&quot;.square&quot;</span>).height(); <span class="hljs-comment">// retourne la hauteur en pixel de .square</span>
 
-var nomComplet =</div>
-
-	<pre class="hidden code-solution">var prenom = &quot;John&quot;;
-var nom = &quot;Smith&quot;;
-
-var nomComplet = prenom + &quot; &quot; + nom;</pre>
-	<pre class="hidden code-validation">assert(nomComplet === &apos;John Smith&apos;);</pre>
-	
-
-	<div class="buttons">
-	    <a href="#" class="button size-2 action-submit">Submit</a>
-	    <a href="#" class="button size-2 action-solution">Solution</a>
-	</div>
-</div></p>
+$(<span class="hljs-string">&apos;.inputText&apos;</span>).val(); <span class="hljs-comment">// retourne la valeur d&apos;un input type text par exemple</span>
+</code></pre>
+<p>Toute les functions de l&apos;API de jquery sont visible ici : <a href="http://api.jquery.com/" target="_blank">http://api.jquery.com/</a></p>
+<p>Pour utiliser Jquery vous devez charger le script de Jquery juste avant la balise fermante, et avant votre fichier javascript.</p>
+<pre><code class="lang-js">&lt;body&gt;
+<span class="hljs-comment">// ...</span>
+&lt;script src=<span class="hljs-string">&quot;https://code.jquery.com/jquery-1.11.3.min.js&quot;</span> /&gt;
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;votre-code-javascript.js&quot;</span> /&gt;</span><span class="handlebars"><span class="xml">
+<span class="hljs-tag">&lt;<span class="hljs-title">body</span>/&gt;</span>
+</span></span></span></code></pre>
 
                     
                     </section>
@@ -859,10 +853,8 @@ var nomComplet = prenom + &quot; &quot; + nom;</pre>
         </div>
 
         
-        <a href="../strings/create.html" class="navigation navigation-prev " aria-label="Previous page: Création"><i class="fa fa-angle-left"></i></a>
+        <a href="../jquery/index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Jquery"><i class="fa fa-angle-left"></i></a>
         
-        
-        <a href="../strings/length.html" class="navigation navigation-next " aria-label="Next page: Length"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

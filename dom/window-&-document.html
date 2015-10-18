@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Concatenation | Invention du langage javascript</title>
+        <title>window.document | Invention du langage javascript</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.4.3">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../strings/length.html" />
+    <link rel="next" href="../dom/events.html" />
     
     
-    <link rel="prev" href="../strings/create.html" />
+    <link rel="prev" href="../dom/index.html" />
     
 
         
@@ -48,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="3.2" data-basepath=".." data-revision="Sun Oct 18 2015 22:08:57 GMT+0200 (CEST)">
+    <div class="book" data-level="9.1" data-basepath=".." data-revision="Sun Oct 18 2015 22:08:57 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -257,7 +257,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.2" data-path="strings/concat.html">
+        <li class="chapter " data-level="3.2" data-path="strings/concat.html">
             
                 
                     <a href="../strings/concat.html">
@@ -578,7 +578,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="9.1" data-path="dom/window-&amp;-document.html">
+        <li class="chapter active" data-level="9.1" data-path="dom/window-&amp;-document.html">
             
                 
                     <a href="../dom/window-&amp;-document.html">
@@ -813,42 +813,38 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="concat%C3%A9nation">Concat&#xE9;nation</h1>
-<p>La concat&#xE9;nation est le fait d&apos;additionner deux (ou plus) string ensemble. Cela combine les strings ensemble.</p>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> longTexte = <span class="hljs-string">&quot;Hello &quot;</span> + <span class="hljs-string">&quot;world ! My name is &quot;</span> + <span class="hljs-string">&quot;Bob &quot;</span>;
+                        <h1 id="l-object-window-document">L&apos;object window &amp; document</h1>
+<p>Au sommet de l&apos;arbre DOM nous avons l&apos;object window, cette object englobe tout les objects du DOM.</p>
+<p>Window correspond &#xE0; la fen&#xEA;tre du navigateur.</p>
+<p>L&apos;Object window contient des objects, les trois principaux sont history, document et location.</p>
+<p>Celui qui va nous int&#xE9;ress&#xE9; est document, il est accessible via <code>window.document</code>.</p>
+<p><code>document</code> fait r&#xE9;f&#xE9;rence &#xE0; la page HTML (contenu dans une fenetre &quot;window&quot;)</p>
+<p>L&apos;object <code>document</code> nous fournis un ensemble de function nous permettant d&apos;int&#xE9;ragir avec une page HTML, en voici quelques un qui vont nous permettre de selectionner un Node HTML (&#xE9;lement HTML):</p>
+<ul>
+<li>window.document.getElementById</li>
+<li>window.document.getElementsByTagName</li>
+<li>window.document.getElementsByClassName</li>
+<li>window.document.querySelector</li>
+<li>window.document.querySelectorAll</li>
+</ul>
+<h2 id="getelementbyid">getElementById</h2>
+<p>Permet de s&#xE9;lectionner un node HTML (&#xE9;l&#xE9;ment html a, h1, p, div, span, etc&#x2026;) en le recherchant via son id (css), exemple pour #title, je vais &#xE9;crire:</p>
+<pre><code class="lang-js"><span class="hljs-built_in">window</span>.document.getElementById(<span class="hljs-string">&quot;title&quot;</span>)
 </code></pre>
-<p><div class="exercise">
-	<div class="header">Exercise</div>
-	<div class="alert alert-success">
-	    <b>Correct!</b>
-	</div>
-
-	<div class="alert alert-danger error-message">
-	    <b>False!</b>
-	</div>
-
-	<div class="message">
-	
-Concat&#xE9;ner plusieurs variables et string afin que la variable `nomComplet` valent &quot;John Smith&quot;.
-
-	</div>
-	<div class="editor" style="height: 80px">var prenom = &quot;John&quot;;
-var nom = &quot;Smith&quot;;
-
-var nomComplet =</div>
-
-	<pre class="hidden code-solution">var prenom = &quot;John&quot;;
-var nom = &quot;Smith&quot;;
-
-var nomComplet = prenom + &quot; &quot; + nom;</pre>
-	<pre class="hidden code-validation">assert(nomComplet === &apos;John Smith&apos;);</pre>
-	
-
-	<div class="buttons">
-	    <a href="#" class="button size-2 action-submit">Submit</a>
-	    <a href="#" class="button size-2 action-solution">Solution</a>
-	</div>
-</div></p>
+<p><strong>note</strong>: getElementById ne retourne qu&apos;un &#xE9;l&#xE9;ment car il ne peut y avoir qu&apos;un Id css par page html.</p>
+<p><a href="http://jsbin.com/socopo/edit?html,js,output" target="_blank">source code</a></p>
+<h2 id="getelementsbytagname">getElementsByTagName</h2>
+<p>M&#xEA;me principe que pour getElementById, sauf qu&apos;ici on recherche par nom de tag (ex: html, body, h1, p, etc&#x2026;). Autre diff&#xE9;rence, getElementsByTagName va retourner une liste de node HTML, car si l&apos;on recherche par exemple h2, il peut y en avoir plusieurs dans la page.</p>
+<p><a href="http://jsbin.com/bugohev/edit?html,js,output" target="_blank">source code</a></p>
+<h2 id="getelementsbyclassname">getElementsByClassName</h2>
+<p>M&#xEA;me principe que pour getElementsByTagName, sauf qu&apos;ici on recherche par nom de classe.</p>
+<p><a href="http://jsbin.com/dizufu/3/edit?html,js,output" target="_blank">source code</a></p>
+<h2 id="queryselector">querySelector</h2>
+<p>querySelector nous permet de faire des s&#xE9;lection comme en CSS (ex: .maClass, h1.uneClasse, p &gt; span#title, etc&#x2026;). Cependant il ne retourne qu&apos;un seul node HTML, c&apos;est &#xE0; dire qu&apos;il ne retourne que le premier &#xE9;l&#xE9;ment trouv&#xE9; (m&#xEA;me si il y en a plusieur sur la page).</p>
+<p><a href="http://jsbin.com/zeriwo/2/edit?html,js,output" target="_blank">source code</a></p>
+<h2 id="queryselectorall">querySelectorAll</h2>
+<p>Similaire &#xE0; querySelector sauf qu&apos;il peut retourner plusieurs nodes HTML (comme getElementsByClassName&#x2026;).</p>
+<p><a href="http://jsbin.com/murafa/1/edit?html,js,output" target="_blank">source code</a></p>
 
                     
                     </section>
@@ -859,10 +855,10 @@ var nomComplet = prenom + &quot; &quot; + nom;</pre>
         </div>
 
         
-        <a href="../strings/create.html" class="navigation navigation-prev " aria-label="Previous page: Création"><i class="fa fa-angle-left"></i></a>
+        <a href="../dom/index.html" class="navigation navigation-prev " aria-label="Previous page: Le DOM"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../strings/length.html" class="navigation navigation-next " aria-label="Next page: Length"><i class="fa fa-angle-right"></i></a>
+        <a href="../dom/events.html" class="navigation navigation-next " aria-label="Next page: Les événements"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
