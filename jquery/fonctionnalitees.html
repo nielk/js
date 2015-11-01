@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Boucle While | Invention du langage javascript</title>
+        <title>Les fonctionnalitées | Invention du langage javascript</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.4.3">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../loops/dowhile.html" />
+    <link rel="next" href="../jquery/plugins.html" />
     
     
-    <link rel="prev" href="../loops/for.html" />
+    <link rel="prev" href="../jquery/events.html" />
     
 
         
@@ -48,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="6.2" data-basepath=".." data-revision="Sun Nov 01 2015 17:18:41 GMT+0100 (CET)">
+    <div class="book" data-level="11.5" data-basepath=".." data-revision="Sun Nov 01 2015 17:18:41 GMT+0100 (CET)">
     
 
 <div class="book-summary">
@@ -455,7 +455,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="6.2" data-path="loops/while.html">
+        <li class="chapter " data-level="6.2" data-path="loops/while.html">
             
                 
                     <a href="../loops/while.html">
@@ -740,7 +740,7 @@
             
         </li>
     
-        <li class="chapter " data-level="11.5" data-path="jquery/fonctionnalitees.html">
+        <li class="chapter active" data-level="11.5" data-path="jquery/fonctionnalitees.html">
             
                 
                     <a href="../jquery/fonctionnalitees.html">
@@ -896,59 +896,28 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="la-boucle-while">La boucle While</h1>
-<p>La boucle While r&#xE9;p&#xE8;te un bloc de code aussi longtemp que sa condition est true.</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">while</span>(condition){
-    <span class="hljs-comment">// s&apos;ex&#xE9;cute tant que la condition est true</span>
-}
-</code></pre>
-<p>Par exemple, la boucle dans l&apos;exemple ci-dessous va r&#xE9;p&#xE9;ter son bloc de code aussi longtemp que la variable i est inf&#xE9;rieur &#xE0; 5:</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>, x = <span class="hljs-string">&quot;&quot;</span>;
-<span class="hljs-keyword">while</span> (i &lt; <span class="hljs-number">5</span>) {
-    x = x + <span class="hljs-string">&quot; le nombre est &quot;</span> + i;
-    i++;
-}
-</code></pre>
-<p><strong>Note</strong>: Attention, evitez de cr&#xE9;er des boucles infinie avec des conditions toujours true!</p>
-<p><div class="exercise">
-	<div class="header">Exercise</div>
-	<div class="alert alert-success">
-	    <b>Correct!</b>
-	</div>
-
-	<div class="alert alert-danger error-message">
-	    <b>False!</b>
-	</div>
-
-	<div class="message">
-	
-Utilisez une boucle `While` pour cr&#xE9;er une variable nomm&#xE9;e `message` qui &#xE0; chaque it&#xE9;ration concat&#xE8;ne les nombres &#xE0; partir de 0 (0, 1, 2, 3, &#x2026;) et ce tant que message.length est inf&#xE9;rieur &#xE0; 100.
-
-	</div>
-	<div class="editor" style="height: 140px">var message = &quot;&quot;;</div>
-
-	<pre class="hidden code-solution">var message = &quot;&quot;;
-var i = 0;
-
-while (message.length &lt; 100) {
-    message = message + i;
-    i = i + 1;
-}</pre>
-	<pre class="hidden code-validation">var message2 = &quot;&quot;;
-var i2 = 0;
-
-while (message2.length &lt; 100) {
-    message2 = message2 + i2;
-    i2 = i2 + 1;
-}
-assert(message === message2);</pre>
-	
-
-	<div class="buttons">
-	    <a href="#" class="button size-2 action-submit">Submit</a>
-	    <a href="#" class="button size-2 action-solution">Solution</a>
-	</div>
-</div></p>
+                        <h1 id="fonctionnalit%C3%A9s">Fonctionnalit&#xE9;s</h1>
+<p><code>.fadeIn()</code> : animation d&apos;entr&#xE9;e en fondu
+<code>.fadeOut()</code> : animation de sortie en fondu
+<code>.fadeToggle()</code> : au premier appel de cette function, c&apos;est fadeIn() qui est d&#xE9;clench&#xE9;. Au second appel c&apos;est fadeOut() qui est d&#xE9;clench&#xE9; et ainsi de suite une fois sur deux.</p>
+<p><a href="http://jsbin.com/guname/2/edit?html,js,output" target="_blank">source code</a></p>
+<p><code>.animate()</code> : permet de changer les propri&#xE9;t&#xE9;s CSS d&apos;un node HTML et les animer.</p>
+<p><a href="http://jsbin.com/zimapu/2/edit?html,js,output" target="_blank">source code</a></p>
+<p><code>.hide()</code> : cache un &#xE9;l&#xE9;ment HTML
+<code>.show()</code> : refait appara&#xEE;tre un &#xE9;l&#xE9;ment HTML qui a &#xE9;t&#xE9; cach&#xE9; (.hide()).
+<code>.toggle()</code> : m&#xEA;me principe qu&apos;avec fadeToggle, un coup hide, un coup show etc...</p>
+<p><code>addClass</code>:
+<code>removeClass</code>:
+<code>toggleClass</code>:</p>
+<p><code>.attr()</code> : obtenir ou changer la valeur d&apos;un attribut HTML</p>
+<p><a href="http://jsbin.com/hojezih/3/edit?html,js,output" target="_blank">source code</a></p>
+<p><code>.html()</code> : obtenir ou changer le contenu html d&apos;un node html</p>
+<p><code>.val()</code>
+<code>.css()</code></p>
+<h1 id="exercice">Exercice</h1>
+<p>Avec vos connaissances des Events, de la s&#xE9;lection, et des fonctionnalit&#xE9;s de jQuery, vous allez refaire l&apos;application Todo app du chapitre pr&#xE9;c&#xE9;dent:</p>
+<p>T&#xE9;l&#xE9;chargez les sources du projet sur : <a href="https://github.com/nielk/exercice-01" target="_blank">https://github.com/nielk/exercice-01</a>  (Download ZIP)</p>
+<p>Sur Sublime Text faire : Files/Fichier &gt; Open/Ouvrir puis s&#xE9;lectionnez le dossier t&#xE9;l&#xE9;charger</p>
 
                     
                     </section>
@@ -959,10 +928,10 @@ assert(message === message2);</pre>
         </div>
 
         
-        <a href="../loops/for.html" class="navigation navigation-prev " aria-label="Previous page: Boucle For"><i class="fa fa-angle-left"></i></a>
+        <a href="../jquery/events.html" class="navigation navigation-prev " aria-label="Previous page: Les Events"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../loops/dowhile.html" class="navigation navigation-next " aria-label="Next page: Boucle Do...While"><i class="fa fa-angle-right"></i></a>
+        <a href="../jquery/plugins.html" class="navigation navigation-next " aria-label="Next page: Les Plugins"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Boucle While | Invention du langage javascript</title>
+        <title>Utiliser jQuery | Invention du langage javascript</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.4.3">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../loops/dowhile.html" />
+    <link rel="next" href="../jquery/document-ready.html" />
     
     
-    <link rel="prev" href="../loops/for.html" />
+    <link rel="prev" href="../jquery/index.html" />
     
 
         
@@ -48,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="6.2" data-basepath=".." data-revision="Sun Nov 01 2015 17:18:41 GMT+0100 (CET)">
+    <div class="book" data-level="11.1" data-basepath=".." data-revision="Sun Nov 01 2015 17:18:41 GMT+0100 (CET)">
     
 
 <div class="book-summary">
@@ -455,7 +455,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="6.2" data-path="loops/while.html">
+        <li class="chapter " data-level="6.2" data-path="loops/while.html">
             
                 
                     <a href="../loops/while.html">
@@ -680,7 +680,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="11.1" data-path="jquery/utiliser-jquery.html">
+        <li class="chapter active" data-level="11.1" data-path="jquery/utiliser-jquery.html">
             
                 
                     <a href="../jquery/utiliser-jquery.html">
@@ -896,59 +896,27 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="la-boucle-while">La boucle While</h1>
-<p>La boucle While r&#xE9;p&#xE8;te un bloc de code aussi longtemp que sa condition est true.</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">while</span>(condition){
-    <span class="hljs-comment">// s&apos;ex&#xE9;cute tant que la condition est true</span>
-}
+                        <h1 id="utiliser-jquery">Utiliser Jquery</h1>
+<p>jQuery est une biblioth&#xE8;que Javascript, c&apos;est un fichier .js qui contient des functions qui ont &#xE9;t&#xE9; &#xE9;crites par d&apos;autres d&#xE9;veloppeurs afin de faciliter votre travail. D&#xE8;s lors pour utiliser jQuery vous devez simplement le charger dans votre page HTML en utilisant la balise <code>script</code> :</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+        // ...
+        <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;chemin/vers/votre/fichier/jquery.js&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/javascript&quot;</span> /&gt;</span><span class="handlebars"><span class="xml">
+        <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;votre-code-javascript.js&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/javascript&quot;</span> /&gt;</span><span class="handlebars"><span class="xml">
+    <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</span></span></span></span></code></pre>
+<p>Il est conseill&#xE9; de placer cette balise script avant toutes les autres de votre document HTML.</p>
+<h1 id="cdn">CDN</h1>
+<p>Plut&#xF4;t que de t&#xE9;l&#xE9;charger Jquery puis la placer dans le dossier de votre page HTML, vous pouvez le charger &quot;&#xE0; distance&quot; via un CDN (ordinateurs reli&#xE9;s en r&#xE9;seau &#xE0; travers Internet et qui coop&#xE8;rent afin de mettre &#xE0; disposition du contenu ou des donn&#xE9;es, ici un fichier Javascript).</p>
+<p>adresse d&apos;un CDN pour jquery : <a href="https://code.jquery.com/jquery-1.11.3.min.js" target="_blank">https://code.jquery.com/jquery-1.11.3.min.js</a></p>
+<p>Donc pour charger jQuery par CDN utilisez cette balise html:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;https://code.jquery.com/jquery-1.11.3.min.js&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/javascript&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
 </code></pre>
-<p>Par exemple, la boucle dans l&apos;exemple ci-dessous va r&#xE9;p&#xE9;ter son bloc de code aussi longtemp que la variable i est inf&#xE9;rieur &#xE0; 5:</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>, x = <span class="hljs-string">&quot;&quot;</span>;
-<span class="hljs-keyword">while</span> (i &lt; <span class="hljs-number">5</span>) {
-    x = x + <span class="hljs-string">&quot; le nombre est &quot;</span> + i;
-    i++;
-}
-</code></pre>
-<p><strong>Note</strong>: Attention, evitez de cr&#xE9;er des boucles infinie avec des conditions toujours true!</p>
-<p><div class="exercise">
-	<div class="header">Exercise</div>
-	<div class="alert alert-success">
-	    <b>Correct!</b>
-	</div>
-
-	<div class="alert alert-danger error-message">
-	    <b>False!</b>
-	</div>
-
-	<div class="message">
-	
-Utilisez une boucle `While` pour cr&#xE9;er une variable nomm&#xE9;e `message` qui &#xE0; chaque it&#xE9;ration concat&#xE8;ne les nombres &#xE0; partir de 0 (0, 1, 2, 3, &#x2026;) et ce tant que message.length est inf&#xE9;rieur &#xE0; 100.
-
-	</div>
-	<div class="editor" style="height: 140px">var message = &quot;&quot;;</div>
-
-	<pre class="hidden code-solution">var message = &quot;&quot;;
-var i = 0;
-
-while (message.length &lt; 100) {
-    message = message + i;
-    i = i + 1;
-}</pre>
-	<pre class="hidden code-validation">var message2 = &quot;&quot;;
-var i2 = 0;
-
-while (message2.length &lt; 100) {
-    message2 = message2 + i2;
-    i2 = i2 + 1;
-}
-assert(message === message2);</pre>
-	
-
-	<div class="buttons">
-	    <a href="#" class="button size-2 action-submit">Submit</a>
-	    <a href="#" class="button size-2 action-solution">Solution</a>
-	</div>
-</div></p>
+<p>note: Si vous chargez jquery via CDN vous ne pourrez pas utiliser votre fichier Javascript si vous n&apos;avez pas de connexion internet. Dans ce cas l&#xE0; il vaut mieux t&#xE9;l&#xE9;charger Jquery et le placer dans le dossier de votre page HTML.</p>
 
                     
                     </section>
@@ -959,10 +927,10 @@ assert(message === message2);</pre>
         </div>
 
         
-        <a href="../loops/for.html" class="navigation navigation-prev " aria-label="Previous page: Boucle For"><i class="fa fa-angle-left"></i></a>
+        <a href="../jquery/index.html" class="navigation navigation-prev " aria-label="Previous page: Jquery"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../loops/dowhile.html" class="navigation navigation-next " aria-label="Next page: Boucle Do...While"><i class="fa fa-angle-right"></i></a>
+        <a href="../jquery/document-ready.html" class="navigation navigation-next " aria-label="Next page: Document Ready"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

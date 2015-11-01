@@ -40,7 +40,7 @@
     <link rel="next" href="../jquery/events.html" />
     
     
-    <link rel="prev" href="../jquery/index.html" />
+    <link rel="prev" href="../jquery/document-ready.html" />
     
 
         
@@ -48,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="11.1" data-basepath=".." data-revision="Sun Oct 18 2015 22:19:50 GMT+0200 (CEST)">
+    <div class="book" data-level="11.3" data-basepath=".." data-revision="Sun Nov 01 2015 17:18:41 GMT+0100 (CET)">
     
 
 <div class="book-summary">
@@ -680,14 +680,44 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="11.1" data-path="jquery/selection.html">
+        <li class="chapter " data-level="11.1" data-path="jquery/utiliser-jquery.html">
+            
+                
+                    <a href="../jquery/utiliser-jquery.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.1.</b>
+                        
+                        Utiliser jQuery
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="jquery/document-ready.html">
+            
+                
+                    <a href="../jquery/document-ready.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.2.</b>
+                        
+                        Document Ready
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="11.3" data-path="jquery/selection.html">
             
                 
                     <a href="../jquery/selection.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>11.1.</b>
+                            <b>11.3.</b>
                         
                         La sélection
                     </a>
@@ -695,16 +725,61 @@
             
         </li>
     
-        <li class="chapter " data-level="11.2" data-path="jquery/events.html">
+        <li class="chapter " data-level="11.4" data-path="jquery/events.html">
             
                 
                     <a href="../jquery/events.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>11.2.</b>
+                            <b>11.4.</b>
                         
                         Les Events
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.5" data-path="jquery/fonctionnalitees.html">
+            
+                
+                    <a href="../jquery/fonctionnalitees.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.5.</b>
+                        
+                        Les fonctionnalitées
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.6" data-path="jquery/plugins.html">
+            
+                
+                    <a href="../jquery/plugins.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.6.</b>
+                        
+                        Les Plugins
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.7" data-path="jquery/exercice.html">
+            
+                
+                    <a href="../jquery/exercice.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.7.</b>
+                        
+                        Exercices
                     </a>
             
             
@@ -831,7 +906,7 @@ $(<span class="hljs-string">&quot;#first&quot;</span>); <span class="hljs-commen
 <span class="hljs-comment">// ou</span>
 $(<span class="hljs-string">&quot;h1 &gt; p.text&quot;</span>) <span class="hljs-comment">// un selector CSS</span>
 </code></pre>
-<p>Ensuite jquery fournit plein de function/m&#xE9;thodes pour interagir sur ces &#xE9;l&#xE9;ments HTML:</p>
+<p>Ensuite jquery fournit une multitude de functions/m&#xE9;thodes pour interagir sur ces &#xE9;l&#xE9;ments HTML:</p>
 <pre><code class="lang-js">$(<span class="hljs-string">&quot;.maClass&quot;</span>).hide(); <span class="hljs-comment">// cache le/les &#xE9;l&#xE9;ments du DOM qui ont la class .maClass</span>
 $(<span class="hljs-string">&quot;.maClass&quot;</span>).show(); <span class="hljs-comment">// inversement</span>
 
@@ -847,12 +922,6 @@ $(<span class="hljs-string">&apos;.inputText&apos;</span>).val(); <span class="h
 </code></pre>
 <p>Toute les functions de l&apos;API de jquery sont visible ici : <a href="http://api.jquery.com/" target="_blank">http://api.jquery.com/</a></p>
 <p>Pour utiliser Jquery vous devez charger le script de Jquery juste avant la balise fermante, et avant votre fichier javascript.</p>
-<pre><code class="lang-js">&lt;body&gt;
-<span class="hljs-comment">// ...</span>
-&lt;script src=<span class="hljs-string">&quot;https://code.jquery.com/jquery-1.11.3.min.js&quot;</span> /&gt;
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;votre-code-javascript.js&quot;</span> /&gt;</span><span class="handlebars"><span class="xml">
-<span class="hljs-tag">&lt;<span class="hljs-title">body</span>/&gt;</span>
-</span></span></span></code></pre>
 
                     
                     </section>
@@ -863,7 +932,7 @@ $(<span class="hljs-string">&apos;.inputText&apos;</span>).val(); <span class="h
         </div>
 
         
-        <a href="../jquery/index.html" class="navigation navigation-prev " aria-label="Previous page: Jquery"><i class="fa fa-angle-left"></i></a>
+        <a href="../jquery/document-ready.html" class="navigation navigation-prev " aria-label="Previous page: Document Ready"><i class="fa fa-angle-left"></i></a>
         
         
         <a href="../jquery/events.html" class="navigation navigation-next " aria-label="Next page: Les Events"><i class="fa fa-angle-right"></i></a>

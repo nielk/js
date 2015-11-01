@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Boucle While | Invention du langage javascript</title>
+        <title>Document Ready | Invention du langage javascript</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.4.3">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../loops/dowhile.html" />
+    <link rel="next" href="../jquery/selection.html" />
     
     
-    <link rel="prev" href="../loops/for.html" />
+    <link rel="prev" href="../jquery/utiliser-jquery.html" />
     
 
         
@@ -48,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="6.2" data-basepath=".." data-revision="Sun Nov 01 2015 17:18:41 GMT+0100 (CET)">
+    <div class="book" data-level="11.2" data-basepath=".." data-revision="Sun Nov 01 2015 17:18:41 GMT+0100 (CET)">
     
 
 <div class="book-summary">
@@ -455,7 +455,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="6.2" data-path="loops/while.html">
+        <li class="chapter " data-level="6.2" data-path="loops/while.html">
             
                 
                     <a href="../loops/while.html">
@@ -695,7 +695,7 @@
             
         </li>
     
-        <li class="chapter " data-level="11.2" data-path="jquery/document-ready.html">
+        <li class="chapter active" data-level="11.2" data-path="jquery/document-ready.html">
             
                 
                     <a href="../jquery/document-ready.html">
@@ -896,59 +896,18 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="la-boucle-while">La boucle While</h1>
-<p>La boucle While r&#xE9;p&#xE8;te un bloc de code aussi longtemp que sa condition est true.</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">while</span>(condition){
-    <span class="hljs-comment">// s&apos;ex&#xE9;cute tant que la condition est true</span>
-}
+                        <h1 id="document-ready">Document Ready</h1>
+<p>En r&#xE8;gle g&#xE9;n&#xE9;rale, on attends que le DOM soit enti&#xE8;rement charg&#xE9; pour commencer &#xE0; ex&#xE9;cuter notre code jquery. On attends le chargement complet du DOM afin d&apos;&#xE9;viter de s&#xE9;lectionner des nodes HTML qui n&apos;auraient pas encore eu le temps de se charger.</p>
+<p>Heureusement, jQuery fournit une function qui s&apos;ex&#xE9;cute lorsque le DOM a finit de se charger : <code>.ready()</code></p>
+<p><code>.ready()</code> prend un argument de type function.</p>
+<p>ainsi nous l&apos;utiliserons sous cette forme :</p>
+<pre><code class="lang-js">$(<span class="hljs-built_in">document</span>).ready(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">/* Cette function est ex&#xE9;cut&#xE9; lorsque
+       le DOM a finit de se charger
+       ici nous pouvons utiliser les functions de jQuery
+    */</span>
+});
 </code></pre>
-<p>Par exemple, la boucle dans l&apos;exemple ci-dessous va r&#xE9;p&#xE9;ter son bloc de code aussi longtemp que la variable i est inf&#xE9;rieur &#xE0; 5:</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>, x = <span class="hljs-string">&quot;&quot;</span>;
-<span class="hljs-keyword">while</span> (i &lt; <span class="hljs-number">5</span>) {
-    x = x + <span class="hljs-string">&quot; le nombre est &quot;</span> + i;
-    i++;
-}
-</code></pre>
-<p><strong>Note</strong>: Attention, evitez de cr&#xE9;er des boucles infinie avec des conditions toujours true!</p>
-<p><div class="exercise">
-	<div class="header">Exercise</div>
-	<div class="alert alert-success">
-	    <b>Correct!</b>
-	</div>
-
-	<div class="alert alert-danger error-message">
-	    <b>False!</b>
-	</div>
-
-	<div class="message">
-	
-Utilisez une boucle `While` pour cr&#xE9;er une variable nomm&#xE9;e `message` qui &#xE0; chaque it&#xE9;ration concat&#xE8;ne les nombres &#xE0; partir de 0 (0, 1, 2, 3, &#x2026;) et ce tant que message.length est inf&#xE9;rieur &#xE0; 100.
-
-	</div>
-	<div class="editor" style="height: 140px">var message = &quot;&quot;;</div>
-
-	<pre class="hidden code-solution">var message = &quot;&quot;;
-var i = 0;
-
-while (message.length &lt; 100) {
-    message = message + i;
-    i = i + 1;
-}</pre>
-	<pre class="hidden code-validation">var message2 = &quot;&quot;;
-var i2 = 0;
-
-while (message2.length &lt; 100) {
-    message2 = message2 + i2;
-    i2 = i2 + 1;
-}
-assert(message === message2);</pre>
-	
-
-	<div class="buttons">
-	    <a href="#" class="button size-2 action-submit">Submit</a>
-	    <a href="#" class="button size-2 action-solution">Solution</a>
-	</div>
-</div></p>
 
                     
                     </section>
@@ -959,10 +918,10 @@ assert(message === message2);</pre>
         </div>
 
         
-        <a href="../loops/for.html" class="navigation navigation-prev " aria-label="Previous page: Boucle For"><i class="fa fa-angle-left"></i></a>
+        <a href="../jquery/utiliser-jquery.html" class="navigation navigation-prev " aria-label="Previous page: Utiliser jQuery"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../loops/dowhile.html" class="navigation navigation-next " aria-label="Next page: Boucle Do...While"><i class="fa fa-angle-right"></i></a>
+        <a href="../jquery/selection.html" class="navigation navigation-next " aria-label="Next page: La sélection"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

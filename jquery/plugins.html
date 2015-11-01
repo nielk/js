@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Boucle While | Invention du langage javascript</title>
+        <title>Les Plugins | Invention du langage javascript</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.4.3">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../loops/dowhile.html" />
+    <link rel="next" href="../jquery/exercice.html" />
     
     
-    <link rel="prev" href="../loops/for.html" />
+    <link rel="prev" href="../jquery/fonctionnalitees.html" />
     
 
         
@@ -48,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="6.2" data-basepath=".." data-revision="Sun Nov 01 2015 17:18:41 GMT+0100 (CET)">
+    <div class="book" data-level="11.6" data-basepath=".." data-revision="Sun Nov 01 2015 17:18:41 GMT+0100 (CET)">
     
 
 <div class="book-summary">
@@ -455,7 +455,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="6.2" data-path="loops/while.html">
+        <li class="chapter " data-level="6.2" data-path="loops/while.html">
             
                 
                     <a href="../loops/while.html">
@@ -755,7 +755,7 @@
             
         </li>
     
-        <li class="chapter " data-level="11.6" data-path="jquery/plugins.html">
+        <li class="chapter active" data-level="11.6" data-path="jquery/plugins.html">
             
                 
                     <a href="../jquery/plugins.html">
@@ -896,59 +896,31 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="la-boucle-while">La boucle While</h1>
-<p>La boucle While r&#xE9;p&#xE8;te un bloc de code aussi longtemp que sa condition est true.</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">while</span>(condition){
-    <span class="hljs-comment">// s&apos;ex&#xE9;cute tant que la condition est true</span>
-}
-</code></pre>
-<p>Par exemple, la boucle dans l&apos;exemple ci-dessous va r&#xE9;p&#xE9;ter son bloc de code aussi longtemp que la variable i est inf&#xE9;rieur &#xE0; 5:</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>, x = <span class="hljs-string">&quot;&quot;</span>;
-<span class="hljs-keyword">while</span> (i &lt; <span class="hljs-number">5</span>) {
-    x = x + <span class="hljs-string">&quot; le nombre est &quot;</span> + i;
-    i++;
-}
-</code></pre>
-<p><strong>Note</strong>: Attention, evitez de cr&#xE9;er des boucles infinie avec des conditions toujours true!</p>
-<p><div class="exercise">
-	<div class="header">Exercise</div>
-	<div class="alert alert-success">
-	    <b>Correct!</b>
-	</div>
-
-	<div class="alert alert-danger error-message">
-	    <b>False!</b>
-	</div>
-
-	<div class="message">
-	
-Utilisez une boucle `While` pour cr&#xE9;er une variable nomm&#xE9;e `message` qui &#xE0; chaque it&#xE9;ration concat&#xE8;ne les nombres &#xE0; partir de 0 (0, 1, 2, 3, &#x2026;) et ce tant que message.length est inf&#xE9;rieur &#xE0; 100.
-
-	</div>
-	<div class="editor" style="height: 140px">var message = &quot;&quot;;</div>
-
-	<pre class="hidden code-solution">var message = &quot;&quot;;
-var i = 0;
-
-while (message.length &lt; 100) {
-    message = message + i;
-    i = i + 1;
-}</pre>
-	<pre class="hidden code-validation">var message2 = &quot;&quot;;
-var i2 = 0;
-
-while (message2.length &lt; 100) {
-    message2 = message2 + i2;
-    i2 = i2 + 1;
-}
-assert(message === message2);</pre>
-	
-
-	<div class="buttons">
-	    <a href="#" class="button size-2 action-submit">Submit</a>
-	    <a href="#" class="button size-2 action-solution">Solution</a>
-	</div>
-</div></p>
+                        <h1 id="plugins">Plugins</h1>
+<p>Une des forces de jQuery est son &#xE9;cosyst&#xE8;me de plugin tr&#xE8;s riches. Avec jQuery il est possible d&apos;utiliser des plugins (sorte d&apos;extension) qui vont &#xE9;tendre des fonctionnalit&#xE9;s de jQuery. Par exemple il existe des plugins pour cr&#xE9;er des diaporamas d&apos;image, pour cr&#xE9;er des menus, des graphiques (charts etc...), des plugins d&apos;animations, etc...</p>
+<h2 id="quelques-exemple-de-plugins">Quelques exemple de plugins:</h2>
+<h3 id="chartist">chartist</h3>
+<p>Permet de cr&#xE9;er de jolies charts responsives.
+<a href="http://gionkunz.github.io/chartist-js/" target="_blank">http://gionkunz.github.io/chartist-js/</a></p>
+<h3 id="animsition">animsition</h3>
+<p>Permet de cr&#xE9;er des animations entre chaque page (fondu etc...)
+<a href="http://git.blivesta.com/animsition/" target="_blank">http://git.blivesta.com/animsition/</a></p>
+<h2 id="flickity">flickity</h2>
+<p>Permet de cr&#xE9;er un slider/diaporama d&apos;image
+<a href="http://flickity.metafizzy.co/" target="_blank">http://flickity.metafizzy.co/</a></p>
+<h2 id="fotorama">fotorama</h2>
+<p>Permet de cr&#xE9;er une gallerie d&apos;image
+<a href="http://fotorama.io/" target="_blank">http://fotorama.io/</a></p>
+<p>Il existe des centaines, voir des milliers de plugins jQuery, je n&apos;en ai cit&#xE9; ici que quelques un &#xE0; titre d&apos;exemple, je vous invites a en recherche sur google, en utilisant des phrases comme:</p>
+<ul>
+<li>&quot;jquery plugins&quot;</li>
+<li>&quot;jquery plugins slider&quot;</li>
+<li>&quot;jquery plugins galerie&quot;</li>
+<li>&quot;jquery svg animation&quot;</li>
+<li>etc...</li>
+</ul>
+<h1 id="exercice">Exercice</h1>
+<p>Utiliser un par un des plugins cit&#xE9; ci-dessus. Consulter leurs sites pour trouver les instructions pour l&apos;installer dans votre projet (cherchez les termes: set up, quick start, getting started etc&#x2026;).</p>
 
                     
                     </section>
@@ -959,10 +931,10 @@ assert(message === message2);</pre>
         </div>
 
         
-        <a href="../loops/for.html" class="navigation navigation-prev " aria-label="Previous page: Boucle For"><i class="fa fa-angle-left"></i></a>
+        <a href="../jquery/fonctionnalitees.html" class="navigation navigation-prev " aria-label="Previous page: Les fonctionnalitées"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../loops/dowhile.html" class="navigation navigation-next " aria-label="Next page: Boucle Do...While"><i class="fa fa-angle-right"></i></a>
+        <a href="../jquery/exercice.html" class="navigation navigation-next " aria-label="Next page: Exercices"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

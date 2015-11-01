@@ -37,6 +37,8 @@
         
     
     
+    <link rel="next" href="../jquery/fonctionnalitees.html" />
+    
     
     <link rel="prev" href="../jquery/selection.html" />
     
@@ -46,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="11.2" data-basepath=".." data-revision="Sun Oct 18 2015 22:19:50 GMT+0200 (CEST)">
+    <div class="book" data-level="11.4" data-basepath=".." data-revision="Sun Nov 01 2015 17:18:41 GMT+0100 (CET)">
     
 
 <div class="book-summary">
@@ -678,14 +680,44 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="11.1" data-path="jquery/selection.html">
+        <li class="chapter " data-level="11.1" data-path="jquery/utiliser-jquery.html">
+            
+                
+                    <a href="../jquery/utiliser-jquery.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.1.</b>
+                        
+                        Utiliser jQuery
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="jquery/document-ready.html">
+            
+                
+                    <a href="../jquery/document-ready.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.2.</b>
+                        
+                        Document Ready
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.3" data-path="jquery/selection.html">
             
                 
                     <a href="../jquery/selection.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>11.1.</b>
+                            <b>11.3.</b>
                         
                         La sélection
                     </a>
@@ -693,16 +725,61 @@
             
         </li>
     
-        <li class="chapter active" data-level="11.2" data-path="jquery/events.html">
+        <li class="chapter active" data-level="11.4" data-path="jquery/events.html">
             
                 
                     <a href="../jquery/events.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>11.2.</b>
+                            <b>11.4.</b>
                         
                         Les Events
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.5" data-path="jquery/fonctionnalitees.html">
+            
+                
+                    <a href="../jquery/fonctionnalitees.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.5.</b>
+                        
+                        Les fonctionnalitées
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.6" data-path="jquery/plugins.html">
+            
+                
+                    <a href="../jquery/plugins.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.6.</b>
+                        
+                        Les Plugins
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.7" data-path="jquery/exercice.html">
+            
+                
+                    <a href="../jquery/exercice.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.7.</b>
+                        
+                        Exercices
                     </a>
             
             
@@ -822,6 +899,7 @@
                         <h1 id="les-events-avec-jquery">Les Events avec Jquery</h1>
 <p>Avec jquery nous pouvons aussi &#xE9;couter les Events du DOM.</p>
 <p>On utilise la syntaxe $(&quot;.maClass&quot;).on(&quot;click&quot;, function);</p>
+<h2 id="click">click</h2>
 <p>exemple:</p>
 <pre><code class="lang-js"><span class="hljs-keyword">var</span> handleClick = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
     $(<span class="hljs-keyword">this</span>).hide(); <span class="hljs-comment">// l&apos;&#xE9;l&#xE9;ment se cache quand on click dessus</span>
@@ -829,6 +907,30 @@
 
 $(<span class="hljs-string">&quot;.maClass&quot;</span>).on(<span class="hljs-string">&quot;click&quot;</span>, handleClick);
 </code></pre>
+<p><a href="http://jsbin.com/mijuma/edit?html,js,output" target="_blank">source code</a></p>
+<h2 id="mouseover">mouseover</h2>
+<p>L&apos;&#xE9;v&#xE8;nement se d&#xE9;clenche lorsqu&apos;on le survol avec le curseur.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> handleClick = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    $(<span class="hljs-keyword">this</span>).css({<span class="hljs-string">&quot;color&quot;</span>: <span class="hljs-string">&quot;red&quot;</span>}); <span class="hljs-comment">// on ajoute color: red; dans le css de l&apos;&#xE9;l&#xE8;ment</span>
+};
+
+$(<span class="hljs-string">&quot;.maClass&quot;</span>).on(<span class="hljs-string">&quot;mouseover&quot;</span>, handleClick);
+</code></pre>
+<p><a href="http://jsbin.com/zejoqo/edit?html,js,output" target="_blank">source code</a></p>
+<h2 id="keypress">keypress</h2>
+<p>Lorsqu&apos;une touche du clavier est press&#xE9;e l&apos;&#xE9;v&#xE8;nement est d&#xE9;clench&#xE9;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> handleClick = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{
+    <span class="hljs-keyword">var</span> content = event.target.value; <span class="hljs-comment">// on r&#xE9;cup&#xE8;re le contenu de input text</span>
+    $(<span class="hljs-string">&apos;.result&apos;</span>).html(content); <span class="hljs-comment">// je content dans le node HTML qui a la class .result</span>
+};
+
+$(<span class="hljs-string">&quot;.maClass&quot;</span>).on(<span class="hljs-string">&quot;keypress&quot;</span>, handleClick);
+</code></pre>
+<p><a href="http://jsbin.com/heheto/1/edit?html,js,output" target="_blank">source code</a></p>
+<h2 id="exercice">Exercice</h2>
+<p>Dans un document HTML, ajouter un &#xE9;l&#xE8;ment <code>h1</code> avec pour attribut class=&quot;title&quot;, puis ajoutez un &#xE9;l&#xE9;ment button avec pour attribut class=&quot;btn&quot; .</p>
+<p>Ensuite dans votre code javascript, ajoutez un &#xE9;v&#xE8;nement au click sur l&apos;&#xE9;l&#xE9;ment portant la class .btn, dans cette &#xE9;v&#xE8;nement vous changerez la couleur de l&apos;&#xE9;l&#xE9;ment portant la class .title en bleu.</p>
+<p><a href="http://jsbin.com/dicejo/edit?html,js,output" target="_blank">source code</a></p>
 
                     
                     </section>
@@ -839,8 +941,10 @@ $(<span class="hljs-string">&quot;.maClass&quot;</span>).on(<span class="hljs-st
         </div>
 
         
-        <a href="../jquery/selection.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: La sélection"><i class="fa fa-angle-left"></i></a>
+        <a href="../jquery/selection.html" class="navigation navigation-prev " aria-label="Previous page: La sélection"><i class="fa fa-angle-left"></i></a>
         
+        
+        <a href="../jquery/fonctionnalitees.html" class="navigation navigation-next " aria-label="Next page: Les fonctionnalitées"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
