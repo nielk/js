@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Les événements | Invention du langage javascript</title>
+        <title>menu mobile | Invention du langage javascript</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.4.3">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../app 01/index.html" />
+    <link rel="next" href="../pratique/tab.html" />
     
     
-    <link rel="prev" href="../dom/window-&amp;-document.html" />
+    <link rel="prev" href="../pratique/index.html" />
     
 
         
@@ -48,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="9.2" data-basepath=".." data-revision="Sun Nov 08 2015 17:06:13 GMT+0100 (CET)">
+    <div class="book" data-level="12.1" data-basepath=".." data-revision="Sun Nov 08 2015 17:06:13 GMT+0100 (CET)">
     
 
 <div class="book-summary">
@@ -593,7 +593,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="9.2" data-path="dom/events.html">
+        <li class="chapter " data-level="9.2" data-path="dom/events.html">
             
                 
                     <a href="../dom/events.html">
@@ -806,7 +806,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="12.1" data-path="pratique/menu-mobile.html">
+        <li class="chapter active" data-level="12.1" data-path="pratique/menu-mobile.html">
             
                 
                     <a href="../pratique/menu-mobile.html">
@@ -962,41 +962,182 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="les-%C3%A9v%C3%A9nements-du-dom">Les &#xE9;v&#xE9;nements du DOM</h1>
-<p>Le DOM fournit une s&#xE9;rie d&apos;&#xE9;v&#xE9;nements. Ces &#xE9;v&#xE8;nements nous permette d&apos;ex&#xE9;cuter du code &#xE0; des moments pr&#xE9;cis. Par exemple lorsque la page a finit de se charger, lorsqu&apos;un utilisateur clique sur un &#xE9;l&#xE8;ment, lorsque la page d&#xE9;file, etc&#x2026;</p>
-<p>Voici une liste exemple des Events (&#xE9;v&#xE9;nements) fournit par le DOM:</p>
+                        <h1 id="menu">Menu</h1>
+<p>Dans cette section nous allons apprendre &#xE0; cr&#xE9;er un menu cach&#xE9; qui appara&#xEE;t via un bouton.</p>
+<h3 id="1-cr%C3%A9ation-du-dossier-et-fichiers">1 - Cr&#xE9;ation du dossier et fichiers</h3>
 <ul>
-<li>&quot;click&quot;</li>
-<li>&quot;mouseenter&quot;</li>
-<li>&quot;mouseleave&quot;</li>
-<li>&quot;mouseover&quot;</li>
-<li>&quot;keydown&quot;</li>
-<li>&quot;keypress&quot;</li>
-<li>&quot;keyup&quot;</li>
-<li>&quot;touchstart&quot;</li>
-<li>&quot;touchmove&quot;</li>
-<li>&quot;touchend&quot;</li>
-<li>&quot;resize&quot;</li>
-<li>&quot;scroll&quot;</li>
-<li>&quot;submit&quot;</li>
-<li>...</li>
-<li>La liste compl&#xE8;te : <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">https://developer.mozilla.org/en-US/docs/Web/Events</a></li>
+<li>Cr&#xE9;er un dossier nomm&#xE9; &quot;menu-01&quot;</li>
+<li>Ouvrez Sublime Text et ouvrez ce dossier</li>
+<li>Dans Sublime Text, dans le dossier &quot;menu-01&quot; cr&#xE9;ez les fichiers suivant: index.html, main.css, main.js</li>
 </ul>
-<p>Pour utiliser les Events, nous utilisons la <em>m&#xE9;thode</em> <code>.addEventListener(eventName, function);</code></p>
-<p>voici un exemple simple :</p>
-<pre><code class="lang-js"><span class="hljs-comment">// Je s&#xE9;lectionne le node HTML sur lequel je souhaite appliquer un event</span>
-<span class="hljs-keyword">var</span> nodeH1 = <span class="hljs-built_in">window</span>.document.getElementsByTagName(<span class="hljs-string">&apos;h1&apos;</span>);
-
-<span class="hljs-comment">// Je cr&#xE9;e une funtion qui sera ex&#xE9;cut&#xE9; lorsque l&apos;&#xE9;vent se d&#xE9;clenchera</span>
-<span class="hljs-keyword">var</span> handleClick = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-    alert(<span class="hljs-string">&quot;l&apos;&#xE9;l&#xE9;ment H1 &#xE0; &#xE9;t&#xE9; cliqu&#xE9;!&quot;</span>);
-};
-
-<span class="hljs-comment">// J&apos;&#xE9;coute l&apos;event click sur le node de l&apos;&#xE9;l&#xE9;ment H1</span>
-nodeH1.addEventListener(<span class="hljs-string">&quot;click&quot;</span>, handleClick);
+<p><img src="http://img15.hostingpics.net/pics/447571Capturedcran20151108131811.png" alt=""></p>
+<h3 id="2-charger-les-fichiers">2 - Charger les fichiers</h3>
+<p>Nous allons d&#xE9;finir le contenu de la page HTML, il nous faut:</p>
+<ul>
+<li>une page HTML de bases (html, head, body etc...)</li>
+<li>charger jquery via la balise script</li>
+<li>charger via la balise script le fichier main.js</li>
+<li>charger via la balise link le fichier main.css</li>
+</ul>
+<h3 id="3-definir-l-html">3 - Definir l&apos;HTML</h3>
+<p>Nous allons faire une page basique, avec un menu.</p>
+<p>Il nous allons donc ajouter (dans cette ordre) :</p>
+<ul>
+<li>Un menu : une balise <code>nav</code> avec la classe <code>menu</code> qui contient une balise <code>ul</code> contenant des balises <code>li</code> avec des balises <code>a</code> avec la classe <code>menu-link</code>:</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;menu&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;menu-link&quot;</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;menu-link&quot;</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;menu-link&quot;</span>&gt;</span>CV<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;menu-link&quot;</span>&gt;</span>Contact<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
 </code></pre>
-<p>Un exemple de l&apos;utilisation des &#xE9;v&#xE9;nements les plus courants :</p>
-<p><a href="http://jsbin.com/waxofo/edit?html,js,output" target="_blank">code source</a></p>
+<ul>
+<li>un &#xE9;l&#xE9;ment qui ouvrira le menu : une <code>div</code> portant la classe <code>menu-btn</code></li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;menu-btn&quot;</span>&gt;</span>
+    Menu
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<ul>
+<li>du contenu pour notre page :</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">section</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Ma page avec menu<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  <span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+</code></pre>
+<h3 id="4-le-css">4 - Le CSS:</h3>
+<p>Dans ce CSS, je cr&#xE9;e une class .menu, cette class est en position fixed, et positionn&#xE9;e de sorte &#xE0; ce quelle sorte du viewport (partie visible de la page) avec translateX(100%). Le menu est donc cach&#xE9;.</p>
+<p>Ensuite je cr&#xE9;e une class <code>menu-open</code> qui sera rajouter sur le menu lorsqu&apos;on veut qu&apos;il s&apos;affiche. Cette class positionne le menu pour qu&apos;il soit visible (translateX(0%))</p>
+<pre><code class="lang-css"><span class="hljs-class">.menu</span> <span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> fixed</span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">top</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">right</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">bottom</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#fafafa</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">opacity</span>:<span class="hljs-value"> .<span class="hljs-number">9</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">transform</span>:<span class="hljs-value"> <span class="hljs-function">translateX</span>(<span class="hljs-number">100%</span>)</span></span>; <span class="hljs-comment">/* je fais sortir l&apos;&#xE9;l&#xE9;ment du viewport */</span>
+    <span class="hljs-rule"><span class="hljs-attribute">transition</span>:<span class="hljs-value"> .<span class="hljs-number">5s</span> transform ease</span></span>; <span class="hljs-comment">/* animation */</span>
+}</span>
+
+<span class="hljs-class">.menu-open</span> <span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">transform</span>:<span class="hljs-value"> <span class="hljs-function">translateX</span>(<span class="hljs-number">0%</span>)</span></span>; <span class="hljs-comment">/* je ram&#xE8;ne l&apos;&#xE9;l&#xE9;ment dans le viewport */</span>
+    <span class="hljs-rule"><span class="hljs-attribute">transition</span>:<span class="hljs-value"> .<span class="hljs-number">5s</span> transform ease</span></span>; <span class="hljs-comment">/* animation */</span>
+}</span>
+
+<span class="hljs-class">.menu-btn</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> fixed</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">top</span>:<span class="hljs-value"> <span class="hljs-number">20px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">right</span>:<span class="hljs-value"> <span class="hljs-number">20px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">z-index</span>:<span class="hljs-value"> <span class="hljs-number">1</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-number">2px</span> <span class="hljs-number">10px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#76DAFF</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#fff</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">cursor</span>:<span class="hljs-value"> pointer</span></span>;
+}</span>
+</code></pre>
+<h3 id="5-le-javascript">5 - Le Javascript :</h3>
+<pre><code class="lang-js">$(<span class="hljs-built_in">document</span>).ready(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">// je selectionne le bouton pour ouvrir le menu</span>
+    <span class="hljs-keyword">var</span> btn = $(<span class="hljs-string">&quot;.menu-btn&quot;</span>);
+    <span class="hljs-comment">// je selectionne le menu</span>
+    <span class="hljs-keyword">var</span> menu = $(<span class="hljs-string">&quot;.menu&quot;</span>);
+
+    <span class="hljs-comment">// je cr&#xE9;er la function qui ouvre/ferme le menu</span>
+    <span class="hljs-keyword">var</span> toggleMenu = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-comment">// j&apos;ajoute ou enl&#xE8;ve le class menu-open sur le menu</span>
+        menu.toggleClass(<span class="hljs-string">&quot;menu-open&quot;</span>);
+    };
+
+    <span class="hljs-comment">// J&apos;&#xE9;coute l&apos;&#xE9;v&#xE8;nement click sur le btn</span>
+    btn.on(<span class="hljs-string">&quot;click&quot;</span>, toggleMenu);
+});
+</code></pre>
+<h3 id="6-styler">6 - Styler :</h3>
+<p>Nous avons donc un menu fonctionnel, il nous reste a rendre tout &#xE7;a un peu plus jolie avec un peu de CSS :</p>
+<pre><code class="lang-css"><span class="hljs-comment">/* style */</span>
+
+<span class="hljs-at_rule">@<span class="hljs-keyword">import</span> <span class="hljs-function">url</span>(https://fonts.googleapis.com/css?family=Roboto:<span class="hljs-number">400</span>,<span class="hljs-number">500</span>)</span>;
+
+<span class="hljs-tag">body</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">font-family</span>:<span class="hljs-value"> <span class="hljs-string">&apos;Roboto&apos;</span>, arial, sans-serif</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"> <span class="hljs-number">15px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#C7495F</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#fafafa</span></span></span>;
+}</span>
+
+<span class="hljs-tag">p</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">line-height</span>:<span class="hljs-value"> <span class="hljs-number">25px</span></span></span>;
+}</span>
+
+<span class="hljs-tag">section</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-number">15px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">padding-top</span>:<span class="hljs-value"> <span class="hljs-number">50px</span></span></span>;
+}</span>
+
+<span class="hljs-tag">h1</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">text-transform</span>:<span class="hljs-value"> uppercase</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#fafafa</span></span></span>;
+}</span>
+
+<span class="hljs-class">.menu-btn</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> transparent</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#fafafa</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">border</span>:<span class="hljs-value"> <span class="hljs-number">2px</span> solid <span class="hljs-hexcolor">#fafafa</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">border-radius</span>:<span class="hljs-value"> <span class="hljs-number">3px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">font-weight</span>:<span class="hljs-value"> bold</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">text-transform</span>:<span class="hljs-value"> uppercase</span></span>;
+}</span>
+
+<span class="hljs-class">.menu</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#3DBFA8</span></span></span>;
+}</span>
+
+<span class="hljs-class">.menu</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">text-align</span>:<span class="hljs-value"> center</span></span>;
+}</span>
+
+<span class="hljs-class">.menu</span> <span class="hljs-tag">ul</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">padding-left</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+}</span>
+
+<span class="hljs-class">.menu</span> <span class="hljs-tag">li</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">list-style-type</span>:<span class="hljs-value"> none</span></span>;
+}</span>
+
+<span class="hljs-class">.menu-link</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">display</span>:<span class="hljs-value"> block</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#fff</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">text-transform</span>:<span class="hljs-value"> uppercase</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">text-decoration</span>:<span class="hljs-value"> none</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">padding-bottom</span>:<span class="hljs-value"> <span class="hljs-number">20px</span></span></span>;
+}</span>
+
+<span class="hljs-class">.menu</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">padding-top</span>:<span class="hljs-value"> <span class="hljs-number">80px</span></span></span>;
+}</span>
+</code></pre>
+<h2 id="r%C3%A9sultat">R&#xE9;sultat :</h2>
+<iframe src="http://codepen.io/nielk/full/wKYpMW/" width="360" height="680px"></iframe>
 
                     
                     </section>
@@ -1007,10 +1148,10 @@ nodeH1.addEventListener(<span class="hljs-string">&quot;click&quot;</span>, hand
         </div>
 
         
-        <a href="../dom/window-&amp;-document.html" class="navigation navigation-prev " aria-label="Previous page: window.document"><i class="fa fa-angle-left"></i></a>
+        <a href="../pratique/index.html" class="navigation navigation-prev " aria-label="Previous page: Pratiques"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../app 01/index.html" class="navigation navigation-next " aria-label="Next page: Todo App"><i class="fa fa-angle-right"></i></a>
+        <a href="../pratique/tab.html" class="navigation navigation-next " aria-label="Next page: tab"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
